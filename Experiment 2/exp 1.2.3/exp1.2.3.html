@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Drawing Tool</title>
+    <link rel="stylesheet" href="exp1.2.3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">SVG Drawing Tool</h1>
+            <div class="controls">
+                <div class="color-picker">
+                    <label for="colorPicker">Color:</label>
+                    <input type="color" id="colorPicker" value="#0066ff">
+                </div>
+                <div class="shape-selector">
+                    <label for="shapeSelect">Shape:</label>
+                    <select id="shapeSelect">
+                        <option value="circle">Circle</option>
+                        <option value="rectangle">Rectangle</option>
+                        <option value="line">Line</option>
+                    </select>
+                </div>
+                <button class="btn-undo" id="undoBtn">↶ Undo</button>
+                <button class="btn-clear" id="clearBtn">Clear All</button>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <svg id="canvas"></svg>
+        </div>
+
+        <div class="info">
+            <span class="instructions">Click and drag to draw. Use Ctrl+Z to undo.</span>
+            <span>Shapes drawn: <span class="shape-count" id="shapeCount">0</span></span>
+        </div>
+    </div>
+
+    <script src="exp1.2.3.js"></script>
+</body>
+</html>

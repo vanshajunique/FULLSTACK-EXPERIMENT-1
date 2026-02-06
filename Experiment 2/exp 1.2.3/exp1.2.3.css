@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.container {
+    background: white;
+    border-radius: 2vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 3vh;
+    max-width: 90vw;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vh;
+}
+
+.title {
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    flex-wrap: wrap;
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.8vh;
+}
+
+.color-picker label {
+    font-size: 1.4vh;
+    color: #555;
+    font-weight: 500;
+}
+
+input[type="color"] {
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+
+.shape-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.8vh;
+}
+
+.shape-selector label {
+    font-size: 1.4vh;
+    color: #555;
+    font-weight: 500;
+}
+
+select {
+    padding: 0.8vh 1.2vh;
+    border: 2px solid #ddd;
+    border-radius: 0.5vh;
+    font-size: 1.3vh;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+select:hover {
+    border-color: #667eea;
+}
+
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    padding: 1vh 2.2vh;
+    font-size: 1.3vh;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-undo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-width: 12vh;
+}
+
+.btn-undo:hover:not(:disabled) {
+    transform: translateY(-0.2vh);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-undo:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-undo:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-clear {
+    background: #ff6b6b;
+    color: white;
+    min-width: 12vh;
+}
+
+.btn-clear:hover {
+    transform: translateY(-0.2vh);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-clear:active {
+    transform: translateY(0);
+}
+
+.canvas-wrapper {
+    flex: 4;
+    border: 3px dashed #ddd;
+    border-radius: 1vh;
+    background: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    background: white;
+    cursor: crosshair;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vh 2vh;
+    background: #f0f0f0;
+    border-radius: 0.5vh;
+    font-size: 1.3vh;
+    color: #555;
+    font-weight: 500;
+}
+
+.shape-count {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.instructions {
+    font-size: 1.2vh;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2vh;
+        gap: 1.5vh;
+    }
+
+    .title {
+        font-size: 2vh;
+    }
+
+    .header {
+        gap: 1vh;
+    }
+
+    .controls {
+        gap: 1vh;
+    }
+
+    input[type="color"] {
+        width: 4vh;
+        height: 4vh;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Character Counter</title>
+    <link rel="stylesheet" href="2.1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Live Character Counter</h1>
+            <p class="subtitle">Type your message below</p>
+
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    class="message-textarea"
+                    placeholder="Type your message..."
+                    maxlength="150"
+                ></textarea>
+                
+                <div class="counter-section">
+                    <div class="character-counter">
+                        <span id="currentCount" class="count-number">0</span>
+                        <span class="count-divider">/</span>
+                        <span class="count-total">150</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <p id="warningMessage" class="warning-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="2.1.js"></script>
+</body>
+</html>

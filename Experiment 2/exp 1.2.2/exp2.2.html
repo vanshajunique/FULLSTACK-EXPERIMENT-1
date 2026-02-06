@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Filter</title>
+    <link rel="stylesheet" href="exp2.2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Filter</h1>
+        
+        <div class="filter-section">
+            <label for="categoryFilter">Filter by:</label>
+            <select id="categoryFilter">
+                <option value="all">All Products</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="clothing">Clothing</option>
+            </select>
+        </div>
+
+        <div id="productsContainer" class="products-grid">
+        </div>
+    </div>
+
+    <script src="exp2.2.js"></script>
+</body>
+</html>
