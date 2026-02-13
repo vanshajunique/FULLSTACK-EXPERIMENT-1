@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Interface</title>
+    <link rel="stylesheet" href="1.2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Balance: $<span id="balance">0</span></h1>
+        
+        <label>Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        
+        <div class="button-group">
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+        
+        <p id="message"></p>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function deposit() {
+            let amount = parseFloat(document.getElementById('amount').value);
+            
+            if (amount > 0) {
+                balance +=  Number(amount);
+                document.getElementById('balance').textContent = balance;
+                document.getElementById('amount').value = '';
+                document.getElementById('message').textContent = '';
+            } else {
+                document.getElementById('message').textContent = 'Invalid amount!';
+            }
+        }
+
+        function withdraw() {
+            let amount = parseFloat(document.getElementById('amount').value);
+            
+            if (amount > 0 && amount <= balance) {
+                balance -= Number(amount);
+                document.getElementById('balance').textContent = balance;
+                document.getElementById('amount').value = '';
+                document.getElementById('message').textContent = '';
+            } else if (amount > balance) {
+                document.getElementById('message').textContent = 'Insufficient balance!';
+            } else {
+                document.getElementById('message').textContent = 'Invalid amount!';
+            }
+        }
+    </script>   
+</body>
+</html>
